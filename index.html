@@ -11,7 +11,7 @@
 </head>
 <body>
   <!-- stationairy Header-->
-  <header role="header">Are you up on your Jazz Trivia?</header>
+  <header role="banner">Are you up on your Jazz Trivia?</header>
  
 
   <main id="main" role="main">
@@ -30,6 +30,7 @@
       <!-- ANSWER CHOICES-->
         <form id="form-quiz">
            
+           <div role="radiogroup">
             <label class='label-answer'>
               <input type="radio" class="answerOption" name="answerOption" required>
               <span></span>
@@ -49,6 +50,7 @@
               <input type="radio" class="answerOption" name="answerOption" required>
               <span></span>
             </label>
+          </div>  
 
       <!-- SUBMIT BUTTON -->
             <button id='submitAnswer' class='button checkAndSee' type='submit' data-popup-open='popup-feedback'>Are you correct?</button>
