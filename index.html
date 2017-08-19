@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <link href="https://www.fontify.me/wf/f573e2d6f0a25d6c5a10aaaff3a457b1" rel="stylesheet" type="text/css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="index.css">
+  <title>Fun Jazz Quiz!</title>
+</head>
+<body>
+  <!-- stationairy Header-->
+  <header role="header">Are you up on your Jazz Trivia?</header>
+ 
+
+  <main id="main" role="main">
+<!-- opening button to start the quiz-->
+    <div class="quiz-section">
+      <div>
+        <button class='button start' id="button-start">Test your Trivia knowledge!</button>
+      </div>
+
+<!-- QUIZ FORM -->
+      <section id='my-quiz' class='question hidden'>
+        
+        <!-- QUESTION -->
+        <h3 class='jq-question-text'></h3>
+
+      <!-- ANSWER CHOICES-->
+        <form id="form-quiz">
+           
+            <label class='label-answer'>
+              <input type="radio" class="answerOption" name="answerOption" required>
+              <span></span>
+            </label>
+
+            <label class='label-answer'>
+              <input type="radio" class="answerOption" name="answerOption" required>
+              <span></span>
+            </label>
+
+            <label class='label-answer'>
+              <input type="radio" class="answerOption" name="answerOption" required>
+              <span></span>
+            </label>
+
+            <label class='label-answer'>
+              <input type="radio" class="answerOption" name="answerOption" required>
+              <span></span>
+            </label>
+
+      <!-- SUBMIT BUTTON -->
+            <button id='submitAnswer' class='button checkAndSee' type='submit' data-popup-open='popup-feedback'>Are you correct?</button>
+
+            <div class="personalFeedback">
+              <div class="currentQuestionTracker"></div>
+              <div class="currentScore"></div>
+            </div>
+        </form>
+      
+      </section>
+
+      <div id ="feedbackPopup" class="popup" data-popup="popup-feedback">
+          <div class="popup-inner">
+              <h2 class='txt-center'></h2>
+              <img src="" alt="">
+              <span></span>
+              <a id='close-feedback-modal' class="popup-close" data-popup-close="popup-feedback" href="#">X</a>
+          </div>
+      </div>
+
+    </div>
+  </main>
+  <script 
+    src="https://code.jquery.com/jquery-3.2.1.min.js" 
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 
+    crossorigin="anonymous">
+  </script>
+  <script defer src='./app.js'></script>
+</body>
+</html>
